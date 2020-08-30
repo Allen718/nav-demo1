@@ -1,9 +1,14 @@
 const $siteList = $('.siteList')
 const $lastLi = $('.siteList').find("li.last")
-const $submit=$('#submit')
-$submit.on('click',(e)=>{
-    console.log(e)
+const $submit=$('.submit')
+const $input=$('.input')
+$submit.on('click',()=>{
+ const name=document.body.querySelector('.input').value
+    const url='https://www.baidu.com/s?wd='+name
+     window.open(url)
+
 })
+
 const x = localStorage.getItem('x')
 const xObject = JSON.parse(x)
 const hashMap = xObject || [

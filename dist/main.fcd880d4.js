@@ -120,9 +120,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"epB2":[function(require,module,exports) {
 var $siteList = $('.siteList');
 var $lastLi = $('.siteList').find("li.last");
-var $submit = $('#submit');
-$submit.on('click', function (e) {
-  console.log(e);
+var $submit = $('.submit');
+var $input = $('.input');
+$submit.on('click', function () {
+  var name = document.body.querySelector('.input').value;
+  var url = 'https://www.baidu.com/s?wd=' + name;
+  window.open(url);
 });
 var x = localStorage.getItem('x');
 var xObject = JSON.parse(x);
@@ -186,4 +189,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.a200c885.js.map
+//# sourceMappingURL=main.fcd880d4.js.map
