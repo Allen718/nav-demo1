@@ -1,5 +1,9 @@
 const $siteList = $('.siteList')
 const $lastLi = $('.siteList').find("li.last")
+const $submit=$('#submit')
+$submit.on('click',(e)=>{
+    console.log(e)
+})
 const x = localStorage.getItem('x')
 const xObject = JSON.parse(x)
 const hashMap = xObject || [
@@ -52,7 +56,6 @@ $('.addButton').on("click", fn => {
 })
 
 window.onbeforeunload = () => {
-    console.log('页面要关闭了')
     const string = JSON.stringify(hashMap)
     localStorage.setItem('x', string)
 }

@@ -120,6 +120,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"epB2":[function(require,module,exports) {
 var $siteList = $('.siteList');
 var $lastLi = $('.siteList').find("li.last");
+var $submit = $('#submit');
+$submit.on('click', function (e) {
+  console.log(e);
+});
 var x = localStorage.getItem('x');
 var xObject = JSON.parse(x);
 var hashMap = xObject || [{
@@ -168,7 +172,6 @@ $('.addButton').on("click", function (fn) {
 });
 
 window.onbeforeunload = function () {
-  console.log('页面要关闭了');
   var string = JSON.stringify(hashMap);
   localStorage.setItem('x', string);
 };
@@ -183,4 +186,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.ff7b2be6.js.map
+//# sourceMappingURL=main.a200c885.js.map
